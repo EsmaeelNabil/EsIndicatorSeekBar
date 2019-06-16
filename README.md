@@ -1,7 +1,7 @@
-# EsViewsFactory\
-###### indicator SeekBar -v <img src="https://jitpack.io/v/EsmaeelNabil/EsViewsFactory.svg">\
+# EsViewsFactory
+###### indicator SeekBar -v <img src="https://jitpack.io/v/EsmaeelNabil/EsViewsFactory.svg">
 
-##in project build.gradle\
+##in project build.gradle
 
 ```gradle
 allprojects {
@@ -12,15 +12,15 @@ allprojects {
 
     }
 ```
-###### in app => build.gradle file :\
+###### in app => build.gradle file :
 
 ```gradle
 
 android {
 ...
   compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8\
-        targetCompatibility JavaVersion.VERSION_1_8\
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 ...
 }
