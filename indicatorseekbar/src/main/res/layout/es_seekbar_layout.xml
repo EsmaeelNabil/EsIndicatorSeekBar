@@ -12,6 +12,7 @@
             android:id="@+id/seekBarIndicator"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:progress="50"
             android:progressDrawable="@drawable/progresswhite"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

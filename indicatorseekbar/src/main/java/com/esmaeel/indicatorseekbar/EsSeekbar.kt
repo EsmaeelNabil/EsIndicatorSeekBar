@@ -21,44 +21,11 @@ import kotlinx.android.synthetic.main.es_seekbar_layout.view.*
  */
 class EsSeekbar : LinearLayout {
 
-    private var _exampleString: String? = null // TODO: use a default from R.string...
-    private var _exampleColor: Int = Color.RED // TODO: use a default from R.color...
-    private var _exampleDimension: Float = 0f // TODO: use a default from R.dimen...
-
-    private var textPaint: TextPaint? = null
-    private var textWidth: Float = 0f
-    private var textHeight: Float = 0f
-
-    /**
-     * The text to draw
-     */
 
 
-    /**
-     * The font color
-     */
-    var exampleColor: Int
-        get() = _exampleColor
-        set(value) {
-            _exampleColor = value
-        }
-
-    /**
-     * In the example view, this dimension is the font size.
-     */
-
-    var exampleDimension: Float
-        get() = _exampleDimension
-        set(value) {
-            _exampleDimension = value
-        }
-
-    /**
-     * In the example view, this drawable is drawn above the text.
-     */
-    var exampleDrawable: Drawable? = null
-
+    var indicatorPrefix : String? = null
     var indicatorView : View? = null
+
 
     constructor(context: Context) : super(context) {
         init(null, 0)
@@ -77,9 +44,10 @@ class EsSeekbar : LinearLayout {
         LayoutInflater.from(context).inflate(R.layout.es_seekbar_layout, this)
     }
 
-
-    fun doTheMagicIn(context: Context , indicatorLayout : Int = R.layout.indicator ){
+    fun doTheMagicIn(context: Context , indicatorLayout : Int = R.layout.indicator , indicatorPrefix: String = "KM"){
+        //making the background invisible
         indicatorView = LayoutInflater.from(context).inflate(indicatorLayout, null, false)
+        this.indicatorPrefix = indicatorPrefix
         distanceSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar, progressValue: Int, b: Boolean) {
                 if (b) {
@@ -113,29 +81,8 @@ class EsSeekbar : LinearLayout {
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        seekBarIndicator.setProgress(50)
-        distanceSeekBar.setProgress(seekBarIndicator.progress)
-        // TODO: consider storing these as member variables to reduce
-        // allocations per draw cycle.
-        val paddingLeft = paddingLeft
-        val paddingTop = paddingTop
-        val paddingRight = paddingRight
-        val paddingBottom = paddingBottom
-
-        val contentWidth = width - paddingLeft - paddingRight
-        val contentHeight = height - paddingTop - paddingBottom
-
-
-
-        // Draw the example drawable on top of the text.
-        exampleDrawable?.let {
-            it.setBounds(
-                paddingLeft, paddingTop,
-                paddingLeft + contentWidth, paddingTop + contentHeight
-            )
-            it.draw(canvas)
-        }
-
+        seekBarIndicator.progress = 50
+        distanceSeekBar.progress = seekBarIndicator.progress
     }
 
     override fun onWindowFocusChanged(hasWindowFocus: Boolean) {
@@ -149,8 +96,11 @@ class EsSeekbar : LinearLayout {
     }
 
     fun getThumb(progress: Int, indicator: View): Drawable {
-        (indicator.findViewById<View>(R.id.progress_text) as TextView).text = "$progress KM"
-
+        if (indicatorPrefix.isNullOrEmpty()){
+            (indicator.findViewById<View>(R.id.progress_text) as TextView).text = "$progress KM"
+        }else{
+            (indicator.findViewById<View>(R.id.progress_text) as TextView).text = "$progress $indicatorPrefix"
+        }
         indicator.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED)
         val bitmap = Bitmap.createBitmap(indicator.measuredWidth, indicator.measuredHeight, Bitmap.Config.ARGB_8888)
         val canvas = Canvas(bitmap)
