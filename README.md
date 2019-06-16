@@ -1,7 +1,6 @@
-# EsViewsFactory
 ## indicator SeekBar version <img src="https://jitpack.io/v/EsmaeelNabil/EsViewsFactory.svg">
 
-###### in project => build.gradle
+###### in project --> build.gradle
 
 ```gradle
 allprojects {
@@ -12,7 +11,7 @@ allprojects {
 
     }
 ```
-###### in app => build.gradle file :
+###### in app --> build.gradle file :
 
 ```gradle
 
