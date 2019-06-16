@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.es_seekbar_layout.view.*
 /**
  * TODO: document your custom view class.
  */
-class EsSeekbar : LinearLayout {
+class EsSeekBar : LinearLayout {
 
 
 
