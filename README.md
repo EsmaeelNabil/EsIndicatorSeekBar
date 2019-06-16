@@ -26,5 +26,8 @@ android {
 }
 
 dependencies {
-implementation 'com.github.EsmaeelNabil:EsViewsFactory:0.1.1'}
+
+implementation 'com.github.EsmaeelNabil:EsViewsFactory:0.1.1'
+
+}
 ```
