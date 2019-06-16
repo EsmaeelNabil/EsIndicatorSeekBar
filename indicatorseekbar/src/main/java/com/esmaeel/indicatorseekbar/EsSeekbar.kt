@@ -23,6 +23,7 @@ class EsSeekBar : LinearLayout {
 
 
 
+    //This is Master
     var indicatorPrefix : String? = null
     var indicatorView : View? = null
 
