@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="EsSeekbar">
+        <attr name="exampleString" format="string"/>
+        <attr name="exampleDimension" format="dimension"/>
+        <attr name="exampleColor" format="color"/>
+        <attr name="backgroundDrawable" format="color|reference"/>
+    </declare-styleable>
+</resources>
