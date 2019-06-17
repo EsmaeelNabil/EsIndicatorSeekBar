@@ -90,9 +90,9 @@ override fun onCreate(savedInstanceState: Bundle?) {
 OnChangeListeners
 -----------------
 #### First we need this :
-* ** write a function for the `EsSeekBar` that takes an `Int` . 
-* ** path it like this `doTheMagicIn(this,::seekBarListener)` .
-* ** here it is ` Your Listener is up and ready!` . 
+* ** write ** a function for the `EsSeekBar` that takes an `Int` . 
+* ** path it ** like this `doTheMagicIn(this,::seekBarListener)` .
+* ** here it is ** ` Your Listener is up and ready!` . 
 * ** now i guess you know how to make one for `EsRangeBar` Yes? , Pravo :)
 
 ```kotlin
