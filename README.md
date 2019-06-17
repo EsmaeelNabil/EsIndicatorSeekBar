@@ -101,13 +101,18 @@ override fun onCreate(savedInstanceState: Bundle?) {
             ,indicatorBackground = EsSeekBar.WHITE
             ,indicatorPrefix = "KM"
             ,prefixPositionStart = false)
-	    
-	 // Custom rangeBar with indicator custom layout 
+    }
+```
+
+####Custom rangeBar with indicator custom layout 
+```java
         _rangebar.doTheMagicIn(this,::rangeBarListener
             ,indicatorBackground = EsSeekBar.CUSTOM_LAYOUT
             ,indicatorLayoutResource = R.layout.indicator_black
             ,indicatorPrefix = "KM"
             ,prefixPositionStart = false)
-
-    }
 ```
+	
+
+
+
