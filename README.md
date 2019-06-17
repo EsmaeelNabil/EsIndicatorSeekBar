@@ -1,4 +1,4 @@
-## indicator SeekBar version <img src="https://jitpack.io/v/EsmaeelNabil/EsViewsFactory.svg">
+## indicator SeekBar version <img src="https://jitpack.io/v/EsmaeelNabil/EsIndicatorSeekBar.svg">
 
 
 ![](static/light.jpg) ![](static/dark.jpg)
@@ -30,7 +30,7 @@ android {
 
 dependencies {
 
-implementation 'com.github.EsmaeelNabil:EsViewsFactory:0.1.1'
+implementation 'com.github.EsmaeelNabil:EsViewsFactory:0.2.1'
 
 }
 ```
