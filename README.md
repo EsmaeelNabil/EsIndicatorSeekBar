@@ -70,41 +70,68 @@ XML Example
 Kotlin Example
 --------------
 
-```java
+```kotlin
 override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         //Simple EsSeekBar
         _seekbar.doTheMagicIn(this,::seekBarListener)
-        
-        // Custom EsSeekBar with default indicator background "BLACK"
+    
+    }
+    
+    private fun seekBarListener(progress: Int) {
+        textView.text = " progress =  $progress "
+    }
+    
+    private fun rangeBarListener(startRange: Int, endRange: Int) {
+        textView.text = " start =  $startRange end =  $endRange"
+    }
+    
+```
+#### Custom EsSeekBar with default indicator background "BLACK"
+
+```java
         _seekbar.doTheMagicIn(this,::seekBarListener
             ,indicatorPrefix = "KM"
             ,prefixPositionStart = false)
-        
-        // Custom EsSeekBar
+```
+
+
+#### Custom EsSeekBar
+
+```java
         _seekbar.doTheMagicIn(this,::seekBarListener
             ,indicatorBackground = EsSeekBar.WHITE
             ,indicatorPrefix = "$"
             ,prefixPositionStart = true)
-           
-	 // Custom EsSeekBar
+```
+
+
+#### Custom EsSeekBar with custom `layout` resource file 
+#### but it must have a `TextView` with `id`=`progress_text` 
+
+```java
         _seekbar.doTheMagicIn(this,::rangeBarListener
             ,indicatorBackground = EsSeekBar.CUSTOM_LAYOUT
             ,indicatorLayoutResource = R.layout.indicator_black
             ,indicatorPrefix = "KM"
             ,prefixPositionStart = false)
-            
-        // rangeBar with indicator default white background
+```
+
+
+#### rangeBar with indicator default white background
+
+```java
         _rangebar.doTheMagicIn(this,::rangeBarListener
             ,indicatorBackground = EsSeekBar.WHITE
             ,indicatorPrefix = "KM"
             ,prefixPositionStart = false)
-    }
 ```
 
-####Custom rangeBar with indicator custom layout 
+
+#### Custom rangeBar with indicator custom layout 
+
 ```java
         _rangebar.doTheMagicIn(this,::rangeBarListener
             ,indicatorBackground = EsSeekBar.CUSTOM_LAYOUT
