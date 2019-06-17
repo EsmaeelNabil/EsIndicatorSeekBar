@@ -99,10 +99,16 @@ class EsSeekBar : LinearLayout {
     }
 
     fun getThumb(progress: Int, indicator: View): Drawable {
-        if (indicatorPrefix.isNullOrEmpty()){
-            (indicator.findViewById<View>(R.id.progress_text) as TextView).text = "$progress KM"
+        if (indicatorPrefix.equals("")){
+            when(IS_PREFIX_POSITION_START){
+                true -> (indicator.findViewById<View>(R.id.progress_text) as TextView).text = "$indicatorPrefix $progress"
+                false -> (indicator.findViewById<View>(R.id.progress_text) as TextView).text = "$progress $indicatorPrefix"
+            }
         }else{
-            (indicator.findViewById<View>(R.id.progress_text) as TextView).text = "$progress $indicatorPrefix"
+            when(IS_PREFIX_POSITION_START){
+                true -> (indicator.findViewById<View>(R.id.progress_text) as TextView).text = "$indicatorPrefix $progress"
+                false -> (indicator.findViewById<View>(R.id.progress_text) as TextView).text = "$progress $indicatorPrefix"
+            }
         }
         indicator.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED)
         val bitmap = Bitmap.createBitmap(indicator.measuredWidth, indicator.measuredHeight, Bitmap.Config.ARGB_8888)
@@ -111,6 +117,7 @@ class EsSeekBar : LinearLayout {
         indicator.draw(canvas)
         return BitmapDrawable(resources, bitmap)
     }
+
 
 }
 
