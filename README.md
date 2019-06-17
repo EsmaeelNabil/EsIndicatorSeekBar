@@ -4,6 +4,14 @@
 ![](static/light.jpg) ![](static/dark.jpg)
 
 
+##### this library contains two custom views.
+
+```gradle
+ EsSeekBar
+ EsRangeBar
+```
+
+
 ###### in project --> build.gradle
 
 ```gradle
@@ -35,6 +43,22 @@ implementation 'com.github.EsmaeelNabil:EsViewsFactory:0.2.1'
 }
 ```
 
+XML Example
+--------------
+```xml
+<com.esmaeel.indicatorseekbar.EsSeekBar
+			android:id="@+id/_seekbar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"/>
+```
+
+```xml
+<com.example.rangeindicatorseekbar.EsRangeBar
+			android:id="@+id/_rangebar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"/>
+```
+
 Kotlin Example
 --------------
 
@@ -43,19 +67,28 @@ override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //default prefix is => "KM"
-        seekBar.doTheMagicIn(this)
+        //Simple EsSeekBar
+        _seekbar.doTheMagicIn(this,::seekBarListener)
         
-        //Custom prefix
-        seekBar.doTheMagicIn(this,indicatorPrefix = "USD")
-
-
-        // if you want to design your indicator
-        // make a layout file inside it a TextView it's id ==> progress_text
-        seekBar.doTheMagicIn(this,indicatorLayout = R.layout.indicator_layout)
-
-        // Full Custimized indicator 
-        seekBar.doTheMagicIn(this,indicatorLayout = R.layout.indicator_layout,indicatorPrefix = "USD")
+        // Custom EsSeekBar with default indicator background "BLACK"
+        _seekbar.doTheMagicIn(this,::seekBarListener
+            ,indicatorPrefix = "KM"
+            ,prefixPositionStart = false)
+        
+        // Custom EsSeekBar
+        _seekbar.doTheMagicIn(this,::seekBarListener
+            ,indicatorBackground = EsSeekBar.CUSTOM_LAYOUT
+            ,indicatorLayoutResource = R.layout.indicator_black
+            ,indicatorPrefix = "$"
+            ,prefixPositionStart = true)
+           
+            
+        // Custom rangeBar
+        _rangebar.doTheMagicIn(this,::rangeBarListener
+            ,indicatorBackground = EsSeekBar.CUSTOM_LAYOUT
+            ,indicatorLayoutResource = R.layout.indicator_black
+            ,indicatorPrefix = "KM"
+            ,prefixPositionStart = false)
 
     }
 ```
