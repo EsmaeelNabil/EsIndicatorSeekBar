@@ -43,7 +43,7 @@ implementation 'com.github.EsmaeelNabil:EsViewsFactory:0.2.2'
 
 XML Example
 --------------
-![](static/lightanddark.png)
+![](static/seekbar.png)
 
 
 ```xml
