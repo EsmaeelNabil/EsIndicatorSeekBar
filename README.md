@@ -1,6 +1,6 @@
 ## Indicator SeekBar version <img src="https://jitpack.io/v/EsmaeelNabil/EsIndicatorSeekBar.svg">
 
-### this library contains two custom views.
+### this library contains two customizable  views.
 
 ```gradle
  EsSeekBar
