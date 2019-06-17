@@ -1,7 +1,6 @@
 ## indicator SeekBar version <img src="https://jitpack.io/v/EsmaeelNabil/EsIndicatorSeekBar.svg">
 
-
-
+![](static/lightanddark.jpg)
 
 ##### this library contains two custom views.
 
@@ -44,7 +43,8 @@ implementation 'com.github.EsmaeelNabil:EsViewsFactory:0.2.2'
 
 XML Example
 --------------
-![](static/lightanddark.jpg)
+![](static/lightanddark.png)
+
 
 ```xml
 
@@ -54,6 +54,9 @@ XML Example
 			android:layout_height="wrap_content"/>
 
 ```
+
+![](static/rangbar.png)
+
 
 ```xml
 
