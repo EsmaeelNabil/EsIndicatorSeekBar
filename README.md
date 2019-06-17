@@ -1,4 +1,5 @@
-## Indicator SeekBar version <img src="https://jitpack.io/v/EsmaeelNabil/EsIndicatorSeekBar.svg">
+## Indicator SeekBar version [![](https://jitpack.io/v/EsmaeelNabil/EsIndicatorSeekBar.svg)](https://jitpack.io/#EsmaeelNabil/EsIndicatorSeekBar)
+
 
 ### this library contains two customizable  views.
 
