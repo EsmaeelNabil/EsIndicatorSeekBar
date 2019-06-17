@@ -1,13 +1,17 @@
 ## indicator SeekBar version <img src="https://jitpack.io/v/EsmaeelNabil/EsIndicatorSeekBar.svg">
 
-![](static/lightanddark.jpg)
-
-##### this library contains two custom views.
+### this library contains two custom views.
 
 ```gradle
  EsSeekBar
  EsRangeBar
 ```
+
+![](static/seekbar.png)
+![](static/rangbar.png)
+
+
+
 
 
 ###### in project --> build.gradle
@@ -43,7 +47,6 @@ implementation 'com.github.EsmaeelNabil:EsViewsFactory:0.2.2'
 
 XML Example
 --------------
-![](static/seekbar.png)
 
 
 ```xml
@@ -55,7 +58,6 @@ XML Example
 
 ```
 
-![](static/rangbar.png)
 
 
 ```xml
