@@ -1,4 +1,4 @@
-package com.example.rangeindicatorseekbar;
+package com.esmaeel.rangeindicatorseekbar;
 
 import org.junit.Test;
 

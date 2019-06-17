@@ -1,4 +1,4 @@
-package com.example.rangeindicatorseekbar
+package com.esmaeel.rangeindicatorseekbar
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -15,7 +15,6 @@ import android.widget.TextView
 import com.jaygoo.widget.OnRangeChangedListener
 import com.jaygoo.widget.RangeSeekBar
 import kotlinx.android.synthetic.main.es_rangebar_layout.view.*
-import kotlin.math.absoluteValue
 
 
 class EsRangeBar : LinearLayout {

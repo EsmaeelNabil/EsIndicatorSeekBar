@@ -1,4 +1,4 @@
-package com.example.rangeindicatorseekbar;
+package com.esmaeel.rangeindicatorseekbar;
 
 import android.content.Context;
 import androidx.test.InstrumentationRegistry;
