@@ -1,7 +1,6 @@
 ## indicator SeekBar version <img src="https://jitpack.io/v/EsmaeelNabil/EsIndicatorSeekBar.svg">
 
 
-![](static/light.jpg) ![](static/dark.jpg)
 
 
 ##### this library contains two custom views.
@@ -38,25 +37,31 @@ android {
 
 dependencies {
 
-implementation 'com.github.EsmaeelNabil:EsViewsFactory:0.2.1'
+implementation 'com.github.EsmaeelNabil:EsViewsFactory:0.2.2'
 
 }
 ```
 
 XML Example
 --------------
+![](static/lightanddark.jpg)
+
 ```xml
+
 <com.esmaeel.indicatorseekbar.EsSeekBar
 			android:id="@+id/_seekbar"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"/>
+
 ```
 
 ```xml
-<com.example.rangeindicatorseekbar.EsRangeBar
+
+<com.esmaeel.rangeindicatorseekbar.EsRangeBar
 			android:id="@+id/_rangebar"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"/>
+
 ```
 
 Kotlin Example
@@ -77,13 +82,24 @@ override fun onCreate(savedInstanceState: Bundle?) {
         
         // Custom EsSeekBar
         _seekbar.doTheMagicIn(this,::seekBarListener
-            ,indicatorBackground = EsSeekBar.CUSTOM_LAYOUT
-            ,indicatorLayoutResource = R.layout.indicator_black
+            ,indicatorBackground = EsSeekBar.WHITE
             ,indicatorPrefix = "$"
             ,prefixPositionStart = true)
            
+	 // Custom EsSeekBar
+        _seekbar.doTheMagicIn(this,::rangeBarListener
+            ,indicatorBackground = EsSeekBar.CUSTOM_LAYOUT
+            ,indicatorLayoutResource = R.layout.indicator_black
+            ,indicatorPrefix = "KM"
+            ,prefixPositionStart = false)
             
-        // Custom rangeBar
+        // rangeBar with indicator default white background
+        _rangebar.doTheMagicIn(this,::rangeBarListener
+            ,indicatorBackground = EsSeekBar.WHITE
+            ,indicatorPrefix = "KM"
+            ,prefixPositionStart = false)
+	    
+	 // Custom rangeBar with indicator custom layout 
         _rangebar.doTheMagicIn(this,::rangeBarListener
             ,indicatorBackground = EsSeekBar.CUSTOM_LAYOUT
             ,indicatorLayoutResource = R.layout.indicator_black
