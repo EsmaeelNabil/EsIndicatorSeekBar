@@ -80,13 +80,20 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
         //Simple EsSeekBar
         _seekbar.doTheMagicIn(this,::seekBarListener)
+	
+	//Simple EsRangeBar
+	_rangebar.doTheMagicIn(this,::rangeBarListener)
     
     } 
 ```
 
 OnChangeListeners
 -----------------
-#### First you write a function for the `EsSeekBar` that takes an `Int` and path it like this `doTheMagicIn(this,::seekBarListener)` and here it is ` Your Listener is up and ready!` now i guess you know how to make one for `EsRangeBar` Yes? . Pravo :).
+#### First we need this :
+* ** write a function for the `EsSeekBar` that takes an `Int` . 
+* ** path it like this `doTheMagicIn(this,::seekBarListener)` .
+* ** here it is ` Your Listener is up and ready!` . 
+* ** now i guess you know how to make one for `EsRangeBar` Yes? , Pravo :)
 
 ```kotlin
     private fun seekBarListener(progress: Int) {    
