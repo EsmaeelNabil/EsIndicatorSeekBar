@@ -1,4 +1,4 @@
-## indicator SeekBar version <img src="https://jitpack.io/v/EsmaeelNabil/EsIndicatorSeekBar.svg">
+## Indicator SeekBar version <img src="https://jitpack.io/v/EsmaeelNabil/EsIndicatorSeekBar.svg">
 
 ### this library contains two custom views.
 
@@ -80,20 +80,26 @@ override fun onCreate(savedInstanceState: Bundle?) {
         //Simple EsSeekBar
         _seekbar.doTheMagicIn(this,::seekBarListener)
     
-    }
-    
-    private fun seekBarListener(progress: Int) {
-        textView.text = " progress =  $progress "
+    } 
+```
+
+OnChangeListeners
+-----------------
+#### First you write a function for the `EsSeekBar` that takes an `Int` and path it like this `doTheMagicIn(this,::seekBarListener)` and here it is ` Your Listener is up and ready!` now i guess you know how to make one for `EsRangeBar` Yes? . Pravo :).
+
+```kotlin
+    private fun seekBarListener(progress: Int) {    
+	textView.text = " progress =  $progress "
     }
     
     private fun rangeBarListener(startRange: Int, endRange: Int) {
         textView.text = " start =  $startRange end =  $endRange"
     }
-    
 ```
+
 #### Custom EsSeekBar with default indicator background "BLACK"
 
-```java
+```kotlin
         _seekbar.doTheMagicIn(this,::seekBarListener
             ,indicatorPrefix = "KM"
             ,prefixPositionStart = false)
@@ -113,7 +119,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 #### Custom EsSeekBar with custom `layout` resource file 
 #### but it must have a `TextView` with `id`=`progress_text` 
 
-```java
+```kotlin
         _seekbar.doTheMagicIn(this,::rangeBarListener
             ,indicatorBackground = EsSeekBar.CUSTOM_LAYOUT
             ,indicatorLayoutResource = R.layout.indicator_black
@@ -124,7 +130,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 #### rangeBar with indicator default white background
 
-```java
+```kotlin
         _rangebar.doTheMagicIn(this,::rangeBarListener
             ,indicatorBackground = EsSeekBar.WHITE
             ,indicatorPrefix = "KM"
@@ -134,7 +140,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 #### Custom rangeBar with indicator custom layout 
 
-```java
+```kotlin
         _rangebar.doTheMagicIn(this,::rangeBarListener
             ,indicatorBackground = EsSeekBar.CUSTOM_LAYOUT
             ,indicatorLayoutResource = R.layout.indicator_black
