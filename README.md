@@ -38,11 +38,11 @@ android {
 ...
 }
 
-dependencies {
+ dependencies {
 
-implementation 'com.github.EsmaeelNabil:EsViewsFactory:0.2.2'
+	        implementation 'com.github.EsmaeelNabil:EsIndicatorSeekBar:0.2.2'
 
-}
+ }
 ```
 
 XML Example
