@@ -157,5 +157,8 @@ OnChangeListeners
 ```
 	
 
+Explaning Artical
+-----------------
 
+https://www.linkedin.com/pulse/indicator-seekbar-android-kotlin-esmaeel-napil/
 
