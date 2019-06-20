@@ -162,3 +162,7 @@ Explaning Artical
 
 https://www.linkedin.com/pulse/indicator-seekbar-android-kotlin-esmaeel-napil/
 
+Thanks to 
+--------
+https://github.com/Jay-Goo/RangeSeekBar @Jay-Goo
+
