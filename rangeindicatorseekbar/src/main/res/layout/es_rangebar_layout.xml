@@ -8,6 +8,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:background="@drawable/progresswhite"
         android:layout_margin="8dp"
+        android:layoutDirection="ltr"
+
 >
 
     <SeekBar
@@ -21,7 +23,7 @@
             android:progressDrawable="@drawable/progresswhite"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/distanceSeekBar" />
+            app:layout_constraintBottom_toTopOf="@+id/rangeBar" />
 
     <com.jaygoo.widget.RangeSeekBar
             app:rsb_thumb_drawable="@drawable/circle"
